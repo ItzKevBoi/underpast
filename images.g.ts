@@ -1,4 +1,9 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="?m#sosk2E2_}0L=t*JBe" x="0" y="0"><statement name="HANDLER"><block type="story_queue_story_part" id="~LdE!a,t5!/fp,TI7gp="><statement name="HANDLER"><block type="story_show_text" id="fQ]i,Q;^SLntf}0G}OJ/"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="text"><shadow type="text" id="wjMg-zG~r=K:-F^rxo}e"><field name="TEXT">MT.EBOTT 190X</field></shadow></value><value name="x"><shadow type="math_number" id="/M;,K_4:|[^c$$UCN_yZ"><field name="NUM">80</field></shadow></value><value name="y"><shadow type="math_number" id="ovmknG8Nd;a},W#56y91"><field name="NUM">100</field></shadow></value><next><block type="gamesetbackgroundimage" id="NX1@4,+x-88^o_)A!#3*"><value name="img"><shadow type="background_image_picker" id="aa?gWA#1EEs|^Oz^X86S"><field name="img">img`
+// Auto-generated code. Do not edit.
+namespace myImages {
+
+    helpers._registerFactory("image", function(name: string) {
+        switch(helpers.stringTrim(name)) {
+            case "image1":return img`
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -119,4 +124,17 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value></block></next></block></statement></block></statement></block></xml>
+`;
+        }
+        return null;
+    })
+
+    helpers._registerFactory("animation", function(name: string) {
+        switch(helpers.stringTrim(name)) {
+
+        }
+        return null;
+    })
+
+}
+// Auto-generated code. Do not edit.
