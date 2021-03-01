@@ -198,6 +198,10 @@ function Level () {
         controller.moveSprite(cursor)
         play.setPosition(74, 105)
     }
+    if (level == 1) {
+        play.destroy()
+        controller.moveSprite(play)
+    }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.button, function (sprite, otherSprite) {
     let othersprite = false
