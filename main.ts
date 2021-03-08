@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const Button = SpriteKind.create()
+}
 function Level () {
     if (level == 0) {
         scene.setBackgroundImage(img`
@@ -173,7 +176,7 @@ function Level () {
             ..................................................
             ..................................................
             ..................................................
-            `, SpriteKind.Player)
+            `, SpriteKind.Button)
         Help = sprites.create(img`
             ..................................................
             ..................................................
@@ -225,7 +228,7 @@ function Level () {
             ..................................................
             ..................................................
             ..................................................
-            `, SpriteKind.Player)
+            `, SpriteKind.Button)
         Cursor = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
@@ -499,8 +502,38 @@ function Level () {
         Cursor.destroy()
         Play.destroy()
         Help.destroy()
+        mySprite = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 3 . . . . . . . . . . . . 
+            . . . . 3 3 3 . . . . . . . . . 
+            . . . . . . 3 3 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Player)
+        controller.moveSprite(Play)
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherSprite) {
+    if (otherSprite == Help && controller.A.isPressed()) {
+        level = 1
+        Level()
+    }
+    if (otherSprite == Play && controller.A.isPressed()) {
+        level = 2
+        Level()
+    }
+})
+let mySprite: Sprite = null
 let Cursor: Sprite = null
 let Help: Sprite = null
 let Play: Sprite = null
