@@ -677,6 +677,11 @@ function Level () {
             ................................................................................................................................................................
             `, SpriteKind.Player)
         controller.moveSprite(Play)
+        tiles.setTilemap(tilemap`level1`)
+        mySprite2 = sprites.create(assets.image`Aaron`, SpriteKind.Player)
+        controller.moveSprite(mySprite2)
+        scene.cameraFollowSprite(mySprite2)
+        tiles.placeOnTile(mySprite2, tiles.getTileLocation(4, 44))
     }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherSprite) {
@@ -689,6 +694,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherS
         Level()
     }
 })
+let mySprite2: Sprite = null
 let mySprite: Sprite = null
 let Cursor: Sprite = null
 let Help: Sprite = null
