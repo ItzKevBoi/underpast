@@ -709,6 +709,9 @@ function Level () {
         tiles.placeOnTile(mySprite3, tiles.getTileLocation(17, 48))
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherSprite) {
     if (otherSprite == Help && controller.A.isPressed()) {
         level = 1
