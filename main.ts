@@ -1,6 +1,10 @@
 namespace SpriteKind {
     export const Button = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorOpenEast, function (sprite, location) {
+    level = 3
+    Level()
+})
 function Level () {
     if (level == 0) {
         scene.setBackgroundImage(img`
@@ -708,10 +712,10 @@ function Level () {
             `, SpriteKind.Player)
         tiles.placeOnTile(mySprite3, tiles.getTileLocation(17, 48))
     }
+    if (level == 3) {
+        tiles.setTilemap(tilemap`level2`)
+    }
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Button, function (sprite, otherSprite) {
     if (otherSprite == Help && controller.A.isPressed()) {
         level = 1
